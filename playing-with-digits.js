@@ -6,19 +6,15 @@ digPow(46288, 3) //should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 23606
 
 
 function digPow(n, p) {
-  //convertir n a string
-  let num = n.toString()
   let res = Number
   //separar n en A-B-C
+  let numbers = n.toString().split("")
   //elevar A a p, elevar B a p+1, elevar C p+1 y asignar a  SUMA
-  num.split("").reduce((a, b) => {
-    let A = Math.pow(a, p)
-    let B = Math.pow(b, p+=1)
-    console.log(A);
-    console.log(B);
+  for (i = 0; i < numbers.length; i++) {
 
-    }
-  )
+    console.log(Math.pow(numbers[i],p++));
+  }
+
   //usar Math. floor() para obtener la parte entera de SUMA y restársela al SUMA y si el resultado es 0 el número es entero
   //si la suma de las elevaciones es entero regrersar 1
 }
