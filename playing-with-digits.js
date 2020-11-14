@@ -13,14 +13,10 @@ function digPow(n, p) {
   for (i = 0; i < numbers.length; i++) {
     suma += Math.pow(numbers[i],p++)
   }
-  //usar Math. floor() para obtener la parte entera de SUMA y restársela al SUMA y si el resultado es 0 el número es entero
-
+  //dividir suma de las elevaciones entre n
   suma = suma/n
 
-  // console.log( (Math.floor(suma))-suma=== 0 ? suma : -1);
+  //usar Math. floor() para obtener la parte entera de SUMA y restársela al SUMA y si el resultado es 0 el número es entero;
+  //si la suma es entero regrersar suma, caso contrario regrersar -1
   return ( (Math.floor(suma))-suma=== 0 ? suma : -1);
-
-
-  //
-  //si la suma de las elevaciones es entero regrersar 1
 }
